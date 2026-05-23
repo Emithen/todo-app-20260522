@@ -44,6 +44,7 @@ public class TodoService {
     }
 
     // 완료 상태 토글
+    @Transactional
     public Todo toggleCompleted(long  id) {
         Todo todo = findById(id);
         todo.setCompleted(!todo.isCompleted());
